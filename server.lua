@@ -48,14 +48,14 @@ RegisterNetEvent('qb-contract:writecontact', function(closestplayer, plate)
                     ['@citizenid'] = tCitizen,
                     ['@plate'] = plate,
                 })
-                TriggerClientEvent("QBCore:Notify", src, "Das Fahrzeug mit dem Kennzeichen " .. plate .. " wurde an " .. closestName .. " übertragen!", "success")
-                TriggerClientEvent("QBCore:Notify", target, "Das Fahrzeug mit dem Kennzeichen " .. plate .. " wurde von " .. xName .. " an dich übertragen!", "success")
+                TriggerClientEvent("QBCore:Notify", src, "The vehicle with the license plate " .. plate .. " has been transferred to " .. closestName .. "!", "success")
+                TriggerClientEvent("QBCore:Notify", target, "The vehicle with the license plate " .. plate .. " has been transferred to you by " .. xName .. "!", "success")
                 TriggerClientEvent("vehiclekeys:client:SetOwner", target, plate)
             else
-                TriggerClientEvent("QBCore:Notify", src, "Fehler beim Entfernen des Vertragsgegenstands.", "error")
+                TriggerClientEvent("QBCore:Notify", src, "Error removing the contract item.", "error")
             end
         else
-            TriggerClientEvent("QBCore:Notify", src, "Fehler beim Aktualisieren der Fahrzeugdaten.", "error")
+            TriggerClientEvent("QBCore:Notify", src, "Error updating vehicle data.", "error")
         end
     end)
 end)
