@@ -1,6 +1,6 @@
 **Note: This script is not ready for immediate use.**
 
-** Currently, it only works with qb-inputs, but I plan to update it to use ox libs in the future.I drew inspiration from **"Kaiz"** and his contract script, creating my own version. Currently, it only works with qb-inputs, but I plan to update it to use ox libs in the future.**
+**Currently, it only works with qb-inputs, but I plan to update it to use ox libs in the future.I drew inspiration from **"Kaiz"** and his contract script, creating my own version. Currently, it only works with qb-inputs, but I plan to update it to use ox libs in the future.**
 
 **Dependencies:**
 
