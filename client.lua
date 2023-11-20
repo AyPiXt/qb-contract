@@ -21,17 +21,17 @@ AddEventHandler('qb-contract:useitem', function()
 
         if ownedVehicle then
             local dialog = exports['qb-input']:ShowInput({
-                header = "Fahrzeug verkaufen",
-                submitText = "Verkaufen",
+                header = "Selling Vehicle",
+                submitText = "Selling",
                 inputs = {
                     {
                         type = 'number',
                         name = 'price',
-                        text = 'Verkaufspreis',
+                        text = 'Price',
                         isRequired = true,
                     },
                     {
-                        text = 'Spieler ID',
+                        text = 'Player ID',
                         name = 'playerid',
                         type = 'number',
                         isRequired = true
@@ -44,10 +44,10 @@ AddEventHandler('qb-contract:useitem', function()
                 TriggerServerEvent('qb-contract:writecontact', player, vehicle, data.price, data.playerid)
             end
         else
-            QBCore.Functions.Notify('Du besitzt dieses Fahrzeug nicht!', 'error')
+            QBCore.Functions.Notify('You are not the Owner from this Vehicle!', 'error')
         end
     else
-        QBCore.Functions.Notify('Es gibt keinen Spieler oder kein Fahrzeug in deiner Nähe!', 'error')
+        QBCore.Functions.Notify('There is no Player or Vehicle arround you!', 'error')
     end
 end)
 
